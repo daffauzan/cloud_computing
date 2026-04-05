@@ -46,7 +46,13 @@
 
             <div class="form-group">
                 <label for="jurusan">Jurusan</label>
-                <input type="text" id="jurusan" name="jurusan" value="{{ old('jurusan', $data->jurusan) }}" required>
+                <select name="jurusan" id="jurusan" required>
+                    <option value="" disabled>Pilih jurusan</option>
+                    <option value="Informatika" {{ old('jurusan', $data->jurusan) == 'Informatika' ? 'selected' : '' }}>Teknik Informatika</option>
+                    <option value="Sistem Informasi" {{ old('jurusan', $data->jurusan) == 'Sistem Informasi' ? 'selected' : '' }}>Sistem Informasi</option>
+                    <option value="Elektro" {{ old('jurusan', $data->jurusan) == 'Elektro' ? 'selected' : '' }}>Teknik Elektro</option>
+                    <option value="Teknik Mesin" {{ old('jurusan', $data->jurusan) == 'Teknik Mesin' ? 'selected' : '' }}>Teknik Mesin</option>
+                </select>
             </div>
 
             <div class="form-group">

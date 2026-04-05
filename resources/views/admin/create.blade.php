@@ -44,7 +44,13 @@
 
             <div class="form-group">
                 <label for="jurusan">Jurusan</label>
-                <input type="text" id="jurusan" name="jurusan" value="{{ old('jurusan') }}" required>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="" disabled selected>Pilih jurusan</option>
+                    <option value="Informatika" {{ old('jurusan') == 'Informatika' ? 'selected' : '' }}>Teknik Informatika</option>
+                    <option value="Sistem Informasi" {{ old('jurusan') == 'Sistem Informasi' ? 'selected' : '' }}>Sistem Informasi</option>
+                    <option value="Teknik Elektro" {{ old('jurusan') == 'Teknik Elektro' ? 'selected' : '' }}>Teknik Elektro</option>
+                    <option value="Teknik Mesin" {{ old('jurusan') == 'Teknik Mesin' ? 'selected' : '' }}>Teknik Mesin</option>
+                </select>
             </div>
 
             <div class="form-group">

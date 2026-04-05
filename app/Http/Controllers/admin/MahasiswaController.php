@@ -27,9 +27,9 @@ class MahasiswaController extends Controller
     {
         $validated = $request->validate([
             'nama' => 'required',
-            'nrp' => 'required|unique:mahasiswas',
-            'email' => 'required|email|unique:mahasiswas',
-            'telp' => 'required|unique:mahasiswas',
+            'nrp' => 'required|unique:mahasiswa',
+            'email' => 'required|email|unique:mahasiswa',
+            'telp' => 'required|unique:mahasiswa',
             'jurusan' => 'required',
             'foto' => 'nullable|image'
         ]);
@@ -65,9 +65,9 @@ class MahasiswaController extends Controller
 
         $validated = $request->validate([
             'nama' => 'required',
-            'nrp' => 'required|unique:mahasiswas,nrp,' . $id,
-            'email' => 'required|email|unique:mahasiswas,email,' . $id,
-            'telp' => 'required|unique:mahasiswas,telp,' . $id,
+            'nrp' => 'required|unique:mahasiswa,nrp,' . $id,
+            'email' => 'required|email|unique:mahasiswa,email,' . $id,
+            'telp' => 'required|unique:mahasiswa,telp,' . $id,
             'jurusan' => 'required',
             'foto' => 'nullable|image'
         ]);
